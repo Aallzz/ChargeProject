@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="325.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="325.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="59.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="191.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="151.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AreaChart fx:id="AreaChartSpeedX" GridPane.rowIndex="2">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <AreaChart fx:id="AreaChartSpeedY" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Canvas height="439.0" width="651.0" GridPane.rowSpan="2" />
+      <Pane prefHeight="171.0" prefWidth="140.0" GridPane.columnIndex="2">
+         <children>
+            <RadioButton fx:id="RadioButtonChargePositive" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Positive" />
+            <RadioButton layoutX="14.0" layoutY="38.0" mnemonicParsing="false" text="Negative" />
+            <RadioButton layoutX="14.0" layoutY="62.0" mnemonicParsing="false" text="Neutral" />
+            <Separator layoutX="7.0" layoutY="88.0" prefHeight="6.0" prefWidth="125.0" />
+            <RadioButton layoutX="14.0" layoutY="100.0" mnemonicParsing="false" text="Point" />
+            <RadioButton layoutX="14.0" layoutY="124.0" mnemonicParsing="false" text="Circle" />
+            <RadioButton layoutX="14.0" layoutY="148.0" mnemonicParsing="false" text="RadioButton" />
+         </children>
+      </Pane>
+      <Button fx:id="btn" mnemonicParsing="false" text="Button" />
+      <BarChart fx:id="bc" alternativeColumnFillVisible="true" GridPane.rowIndex="1">
+        <xAxis>
+          <NumberAxis side="BOTTOM" fx:id="xxAxis" />
+        </xAxis>
+        <yAxis>
+          <CategoryAxis fx:id="yyAxis" side="BOTTOM" />
+        </yAxis>
+      </BarChart>
+      <LineChart fx:id="linechart" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <xAxis>
+          <NumberAxis side="BOTTOM"  fx:id = "xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" fx:id = "yAxis" />
+        </yAxis>
+      </LineChart>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
